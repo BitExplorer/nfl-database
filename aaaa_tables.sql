@@ -11,6 +11,7 @@ CREATE TABLE IF NOT EXISTS t_team(
   team_id INTEGER DEFAULT nextval('t_team_team_id_seq') NOT NULL,
   team_location CHAR(40) NOT NULL,
   team_name CHAR(20), -- NULL for now
+  team_short_name CHAR(4), -- NULL for now
   team_league CHAR(4), -- NULL for now
   date_updated TIMESTAMP DEFAULT TO_TIMESTAMP(0),
   date_added TIMESTAMP DEFAULT TO_TIMESTAMP(0)
@@ -44,51 +45,50 @@ DROP TRIGGER IF EXISTS tr_ins_ts_team on t_team;
 CREATE TRIGGER tr_ins_ts_team BEFORE INSERT ON t_team FOR EACH ROW EXECUTE PROCEDURE fn_ins_ts_team();
 
 
-INSERT into t_team(team_location, team_name, team_league) VALUES('Arizona', 'Cardinals', 'NFC');
-INSERT into t_team(team_location, team_name, team_league) VALUES('Atlanta','Falcons', 'NFC');
-INSERT into t_team(team_location, team_name, team_league) VALUES('Baltimore','Ravens', 'AFC');
-INSERT into t_team(team_location, team_name, team_league) VALUES('Buffalo','Bills', 'AFC');
-INSERT into t_team(team_location, team_name, team_league) VALUES('Carolina','Panthers', 'NFC');
-INSERT into t_team(team_location, team_name, team_league) VALUES('Chicago','Bears', 'NFC');
-INSERT into t_team(team_location, team_name, team_league) VALUES('Cincinnati','Bengals', 'AFC');
-INSERT into t_team(team_location, team_name, team_league) VALUES('Cleveland','Browns', 'AFC');
-INSERT into t_team(team_location, team_name, team_league) VALUES('Dallas','Cowboys', 'NFC');
-INSERT into t_team(team_location, team_name, team_league) VALUES('Denver','Broncos', 'AFC');
-INSERT into t_team(team_location, team_name, team_league) VALUES('Detroit','Lions', 'NFC');
-INSERT into t_team(team_location, team_name, team_league) VALUES('Green Bay','Packers', 'NFC');
-INSERT into t_team(team_location, team_name, team_league) VALUES('Houston','Texans', 'AFC');
-INSERT into t_team(team_location, team_name, team_league) VALUES('Indianapolis','Colts', 'AFC');
-INSERT into t_team(team_location, team_name, team_league) VALUES('Jacksonville','Jaguars', 'AFC');
-INSERT into t_team(team_location, team_name, team_league) VALUES('Kansas City','Chiefs', 'AFC');
-INSERT into t_team(team_location, team_name, team_league) VALUES('Los Angeles','Chargers', 'AFC');
-INSERT into t_team(team_location, team_name, team_league) VALUES('Los Angeles','Rams', 'NFC');
-INSERT into t_team(team_location, team_name, team_league) VALUES('Miami','Dolphins', 'AFC');
-INSERT into t_team(team_location, team_name, team_league) VALUES('Minnesota','Vikings', 'NFC');
-INSERT into t_team(team_location, team_name, team_league) VALUES('New England','Patriots', 'AFC');
-INSERT into t_team(team_location, team_name, team_league) VALUES('New Orleans','Saints', 'NFC');
-INSERT into t_team(team_location, team_name, team_league) VALUES('New York','Giants', 'NFC');
-INSERT into t_team(team_location, team_name, team_league) VALUES('New York','Jets', 'AFC');
-INSERT into t_team(team_location, team_name, team_league) VALUES('Oakland','Raiders', 'AFC');
-INSERT into t_team(team_location, team_name, team_league) VALUES('Philadelphia','Eagles', 'NFC');
-INSERT into t_team(team_location, team_name, team_league) VALUES('Pittsburgh','Steelers', 'AFC');
-INSERT into t_team(team_location, team_name, team_league) VALUES('San Francisco','49ers', 'NFC');
-INSERT into t_team(team_location, team_name, team_league) VALUES('Seattle','Seahawks', 'NFC');
-INSERT into t_team(team_location, team_name, team_league) VALUES('Tampa Bay','Buccaneers', 'NFC');
-INSERT into t_team(team_location, team_name, team_league) VALUES('Tennessee','Titans', 'AFC');
-INSERT into t_team(team_location, team_name, team_league) VALUES('Washington','Redskins', 'NFC');
+INSERT into t_team(team_location, team_name, team_league,team_short_name) VALUES('Arizona', 'Cardinals', 'NFC', 'ARI');
+INSERT into t_team(team_location, team_name, team_league,team_short_name) VALUES('Atlanta','Falcons', 'NFC', 'ATL');
+INSERT into t_team(team_location, team_name, team_league,team_short_name) VALUES('Baltimore','Ravens', 'AFC', 'BAL');
+INSERT into t_team(team_location, team_name, team_league,team_short_name) VALUES('Buffalo','Bills', 'AFC', 'BUF');
+INSERT into t_team(team_location, team_name, team_league,team_short_name) VALUES('Carolina','Panthers', 'NFC', 'CAR');
+INSERT into t_team(team_location, team_name, team_league,team_short_name) VALUES('Chicago','Bears', 'NFC', 'CHI');
+INSERT into t_team(team_location, team_name, team_league,team_short_name) VALUES('Cincinnati','Bengals', 'AFC', 'CIN');
+INSERT into t_team(team_location, team_name, team_league,team_short_name) VALUES('Cleveland','Browns', 'AFC','CLE');
+INSERT into t_team(team_location, team_name, team_league,team_short_name) VALUES('Dallas','Cowboys', 'NFC', 'DAL');
+INSERT into t_team(team_location, team_name, team_league,team_short_name) VALUES('Denver','Broncos', 'AFC', 'DEN');
+INSERT into t_team(team_location, team_name, team_league,team_short_name) VALUES('Detroit','Lions', 'NFC', 'DET');
+INSERT into t_team(team_location, team_name, team_league,team_short_name) VALUES('Green Bay','Packers', 'NFC', 'GB');
+INSERT into t_team(team_location, team_name, team_league,team_short_name) VALUES('Houston','Texans', 'AFC', 'HOU');
+INSERT into t_team(team_location, team_name, team_league,team_short_name) VALUES('Indianapolis','Colts', 'AFC', 'IND');
+INSERT into t_team(team_location, team_name, team_league,team_short_name) VALUES('Jacksonville','Jaguars', 'AFC', 'JAX');
+INSERT into t_team(team_location, team_name, team_league,team_short_name) VALUES('Kansas City','Chiefs', 'AFC','KC');
+INSERT into t_team(team_location, team_name, team_league,team_short_name) VALUES('Los Angeles','Chargers', 'AFC', 'LAC');
+INSERT into t_team(team_location, team_name, team_league,team_short_name) VALUES('Los Angeles','Rams', 'NFC', 'LAR');
+INSERT into t_team(team_location, team_name, team_league,team_short_name) VALUES('Miami','Dolphins', 'AFC', 'MIA');
+INSERT into t_team(team_location, team_name, team_league,team_short_name) VALUES('Minnesota','Vikings', 'NFC','MIN');
+INSERT into t_team(team_location, team_name, team_league,team_short_name) VALUES('New England','Patriots', 'AFC','NE');
+INSERT into t_team(team_location, team_name, team_league,team_short_name) VALUES('New Orleans','Saints', 'NFC','NO');
+INSERT into t_team(team_location, team_name, team_league,team_short_name) VALUES('New York','Giants', 'NFC', 'NYG');
+INSERT into t_team(team_location, team_name, team_league,team_short_name) VALUES('New York','Jets', 'AFC','NYJ');
+INSERT into t_team(team_location, team_name, team_league,team_short_name) VALUES('Oakland','Raiders', 'AFC','OAK');
+INSERT into t_team(team_location, team_name, team_league,team_short_name) VALUES('Philadelphia','Eagles', 'NFC','PHI');
+INSERT into t_team(team_location, team_name, team_league,team_short_name) VALUES('Pittsburgh','Steelers', 'AFC','PIT');
+INSERT into t_team(team_location, team_name, team_league,team_short_name) VALUES('San Francisco','49ers', 'NFC','SF');
+INSERT into t_team(team_location, team_name, team_league,team_short_name) VALUES('Seattle','Seahawks', 'NFC','SEA');
+INSERT into t_team(team_location, team_name, team_league,team_short_name) VALUES('Tampa Bay','Buccaneers', 'NFC','TB');
+INSERT into t_team(team_location, team_name, team_league,team_short_name) VALUES('Tennessee','Titans', 'AFC','TEN');
+INSERT into t_team(team_location, team_name, team_league,team_short_name) VALUES('Washington','Redskins', 'NFC', 'WSH');
+
+--ARI ATL BAL BUF CAR CHI CIN CLE DAL DEN DET GB HOU IND JAX KC LAR LAC MIA MIN NE NO NYG NYJ OAK PHI PIT SF SEA TB TEN WSH
 
 CREATE SEQUENCE t_game_game_id_seq start with 1001;
 
 DROP TABLE IF EXISTS t_game;
 CREATE TABLE IF NOT EXISTS t_game (
-  team_id INTEGER,
-  team_type CHAR(6),
-  team_name_owner CHAR(40) NOT NULL,
+  team1 CHAR(4),
+  team1_score INTEGER,
+  team2 CHAR(4),
+  team2_score INTEGER,
   game_id INTEGER DEFAULT nextval('t_game_game_id_seq') NOT NULL,
-  guid CHAR(36) NOT NULL,
-  sha256 CHAR(70),
-  game_date DATE NOT NULL,
-  description VARCHAR(75) NOT NULL,
   date_updated TIMESTAMP DEFAULT TO_TIMESTAMP(0),
   date_added TIMESTAMP DEFAULT TO_TIMESTAMP(0)
 );
