@@ -93,9 +93,7 @@ CREATE TABLE IF NOT EXISTS t_game (
   date_added TIMESTAMP DEFAULT TO_TIMESTAMP(0)
 );
 
---ALTER TABLE t_game ADD CONSTRAINT game_constraint UNIQUE (team_name_owner, game_date, description, category, amount, notes);
-
-CREATE UNIQUE INDEX guid_idx ON t_game(guid);
+CREATE UNIQUE INDEX guid_idx ON t_game(game_id);
 
 CREATE OR REPLACE FUNCTION fn_ins_ts_game() RETURNS TRIGGER AS
 $$
@@ -122,6 +120,19 @@ $$ LANGUAGE PLPGSQL;
 
 DROP TRIGGER IF EXISTS tr_upd_ts_games on t_game;
 CREATE TRIGGER tr_upd_ts_games BEFORE UPDATE ON t_game FOR EACH ROW EXECUTE PROCEDURE fn_upd_ts_game();
+
+CREATE SEQUENCE t_standings_standings_id_seq start with 1001;
+
+DROP TABLE IF EXISTS t_standings;
+CREATE TABLE IF NOT EXISTS t_standings (
+  team_short_name CHAR(4),
+  won INTEGER,
+  lose INTEGER,
+  tie INTEGER,
+  standings_id INTEGER DEFAULT nextval('t_standings_standings_id_seq') NOT NULL,
+  date_updated TIMESTAMP DEFAULT TO_TIMESTAMP(0),
+  date_added TIMESTAMP DEFAULT TO_TIMESTAMP(0)
+);
 
 select conrelid::regclass AS table_from, conname, pg_get_constraintdef(c.oid) from pg_constraint c join pg_namespace n ON n.oid = c.connamespace where  contype in ('f', 'p','c','u') order by contype;
 

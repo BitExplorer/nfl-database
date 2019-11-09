@@ -133,3 +133,57 @@ INSERT INTO t_game(team1, team1_score, team2, team2_score) VALUES('TEN','24', 'A
 INSERT INTO t_game(team1, team1_score, team2, team2_score) VALUES('TEN','27', 'TB','23');
 INSERT INTO t_game(team1, team1_score, team2, team2_score) VALUES('TEN','43', 'CLE','13');
 INSERT INTO t_game(team1, team1_score, team2, team2_score) VALUES('WSH','17', 'MIA','16');
+
+
+INSERT into t_standings(team_short_name) VALUES('ARI');
+INSERT into t_standings(team_short_name) VALUES('ATL');
+INSERT into t_standings(team_short_name) VALUES('BAL');
+INSERT into t_standings(team_short_name) VALUES('BUF');
+INSERT into t_standings(team_short_name) VALUES('CAR');
+INSERT into t_standings(team_short_name) VALUES('CHI');
+INSERT into t_standings(team_short_name) VALUES('CIN');
+INSERT into t_standings(team_short_name) VALUES('CLE');
+INSERT into t_standings(team_short_name) VALUES('DAL');
+INSERT into t_standings(team_short_name) VALUES('DEN');
+INSERT into t_standings(team_short_name) VALUES('DET');
+INSERT into t_standings(team_short_name) VALUES('GB');
+INSERT into t_standings(team_short_name) VALUES('HOU');
+INSERT into t_standings(team_short_name) VALUES('IND');
+INSERT into t_standings(team_short_name) VALUES('JAX');
+INSERT into t_standings(team_short_name) VALUES('KC');
+INSERT into t_standings(team_short_name) VALUES('LAC');
+INSERT into t_standings(team_short_name) VALUES('LAR');
+INSERT into t_standings(team_short_name) VALUES('MIA');
+INSERT into t_standings(team_short_name) VALUES('MIN');
+INSERT into t_standings(team_short_name) VALUES('NE');
+INSERT into t_standings(team_short_name) VALUES('NO');
+INSERT into t_standings(team_short_name) VALUES( 'NYG');
+INSERT into t_standings(team_short_name) VALUES('NYJ');
+INSERT into t_standings(team_short_name) VALUES('OAK');
+INSERT into t_standings(team_short_name) VALUES('PHI');
+INSERT into t_standings(team_short_name) VALUES('PIT');
+INSERT into t_standings(team_short_name) VALUES('SF');
+INSERT into t_standings(team_short_name) VALUES('SEA');
+INSERT into t_standings(team_short_name) VALUES('TB');
+INSERT into t_standings(team_short_name) VALUES('TEN');
+INSERT into t_standings(team_short_name) VALUES('WSH');
+
+UPDATE t_standings
+SET won=subquery.won
+FROM (select team1, count(*) as won from t_game where team1_score > team2_score group by team1) AS subquery
+WHERE  t_standings.team_short_name=subquery.team1;
+
+UPDATE t_standings
+SET lose=subquery.lose
+FROM (select team2, count(*) as lose from t_game where team2_score < team1_score group by team2) AS subquery
+WHERE  t_standings.team_short_name=subquery.team2;
+
+UPDATE t_standings
+SET tie=subquery.tie
+FROM (select team2, count(*) as tie from t_game where team2_score = team1_score group by team2) AS subquery
+WHERE  t_standings.team_short_name=subquery.team2;
+
+UPDATE t_standings
+SET tie=subquery.tie
+FROM (select team1, count(*) as tie from t_game where team1_score = team2_score group by team1) AS subquery
+WHERE  t_standings.team_short_name=subquery.team1;
