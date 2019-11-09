@@ -1,0 +1,135 @@
+Arizona 26, Cincinnati 23
+Arizona 27, Detroit 27
+Arizona 27, NY Giants 21
+Arizona 34, Atlanta 33
+Atlanta 24, Philadelphia 20
+Baltimore 23, Arizona 17
+Baltimore 23, Cincinnati 17
+Baltimore 26, Pittsburgh 23
+Baltimore 30, Seattle 16
+Baltimore 37, New England 20
+Baltimore 59, Miami 10
+Buffalo 14, Tennessee 7
+Buffalo 17, NY Jets 16
+Buffalo 21, Cincinnati 17
+Buffalo 24, Washington 9
+Buffalo 28, NY Giants 14
+Buffalo 31, Miami 21
+Carolina 16, Houston 10
+Carolina 30, Tennessee 20
+Carolina 34, Jacksonville 27
+Carolina 37, Tampa Bay 26
+Carolina 38, Arizona 20
+Chicago 16, Denver 14
+Chicago 16, Minnesota 6
+Chicago 31, Washington 15
+Cleveland 23, NY Jets 3
+Cleveland 40, Baltimore 25
+Dallas 31, Miami 6
+Dallas 31, Washington 21
+Dallas 35, NY Giants 17
+Dallas 37, NY Giants 18
+Dallas 37, Philadelphia 10
+Denver 16, Tennessee 0
+Denver 20, LA Chargers 13
+Denver 24, Cleveland 19
+Detroit 13, LA Chargers 10
+Detroit 27, Philadelphia 24
+Detroit 31, NY Giants 26
+Green Bay 10, Chicago 3
+Green Bay 21, Minnesota 16
+Green Bay 23, Detroit 22
+Green Bay 27, Denver 16
+Green Bay 31, Kansas City 24
+Green Bay 34, Dallas 24
+Green Bay 42, Oakland 24
+Houston 13, Jacksonville 12
+Houston 26, Jacksonville 3
+Houston 27, LA Chargers 20
+Houston 27, Oakland 24
+Houston 31, Kansas City 24
+Houston 53, Atlanta 32
+Indianapolis 15, Denver 13
+Indianapolis 19, Kansas City 13
+Indianapolis 19, Tennessee 17
+Indianapolis 27, Atlanta 24
+Indianapolis 30, Houston 23
+Jacksonville 20, Tennessee 7
+Jacksonville 26, Denver 24
+Jacksonville 27, Cincinnati 17
+Jacksonville 29, NY Jets 15
+Kansas City 26, Minnesota 23
+Kansas City 28, Oakland 10
+Kansas City 30, Denver 6
+Kansas City 33, Baltimore 28
+Kansas City 34, Detroit 30
+Kansas City 40, Jacksonville 26
+LA Chargers 17, Chicago 16
+LA Chargers 26, Green Bay 11
+LA Chargers 30, Indianapolis 24
+LA Chargers 30, Miami 10
+LA Rams 20, Cleveland 13
+LA Rams 24, Cincinnati 10
+LA Rams 27, New Orleans 9
+LA Rams 30, Carolina 27
+LA Rams 37, Atlanta 10
+Miami 26, NY Jets 18
+Minnesota 19, Washington 9
+Minnesota 28, Atlanta 12
+Minnesota 28, NY Giants 10
+Minnesota 34, Oakland 14
+Minnesota 38, Philadelphia 20
+Minnesota 42, Detroit 30
+NY Giants 24, Washington 3
+NY Giants 32, Tampa Bay 31
+NY Jets 24, Dallas 22
+New England 16, Buffalo 10
+New England 27, Cleveland 13
+New England 30, NY Jets 14
+New England 33, NY Jets 0
+New England 33, Pittsburgh 3
+New England 33, Washington 7
+New England 35, NY Giants 14
+New England 43, Miami 0
+New Orleans 12, Dallas 10
+New Orleans 13, Jacksonville 6
+New Orleans 30, Houston 28
+New Orleans 31, Arizona 9
+New Orleans 31, Tampa Bay 24
+New Orleans 33, Seattle 27
+New Orleans 36, Chicago 25
+Oakland 24, Chicago 21
+Oakland 24, Denver 16
+Oakland 31, Detroit 24
+Oakland 31, Indianapolis 24
+Philadelphia 22, Chicago 14
+Philadelphia 31, Buffalo 13
+Philadelphia 31, NY Jets 6
+Philadelphia 32, Washington 27
+Philadelphia 34, Green Bay 27
+Pittsburgh 24, LA Chargers 17
+Pittsburgh 26, Indianapolis 24
+Pittsburgh 27, Cincinnati 3
+Pittsburgh 27, Miami 14
+San Francisco 20, LA Rams 7
+San Francisco 24, Pittsburgh 20
+San Francisco 28, Arizona 25
+San Francisco 31, Cleveland 3
+San Francisco 31, Tampa Bay 17
+San Francisco 41, Cincinnati 17
+San Francisco 51, Carolina 13
+San Francisco 9, Washington 0
+Seattle 21, Cincinnati 20
+Seattle 27, Arizona 10
+Seattle 27, Atlanta 20
+Seattle 28, Pittsburgh 26
+Seattle 30, LA Rams 29
+Seattle 32, Cleveland 28
+Seattle 40, Tampa Bay 34
+Tampa Bay 20, Carolina 14
+Tampa Bay 55, LA Rams 40
+Tennessee 23, LA Chargers 20
+Tennessee 24, Atlanta 10
+Tennessee 27, Tampa Bay 23
+Tennessee 43, Cleveland 13
+Washington 17, Miami 16
